@@ -7,6 +7,7 @@ import com.crowdar.examples.services.LoginService;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import io.cucumber.java.en.And;
 
 /**
  * This class handles the steps in the features files and connects with the service in case of having business logic.
@@ -29,5 +30,7 @@ public class LoginSteps extends PageSteps {
     public void doLoginProcess(String email, String password) {
         LoginService.doLogin(email, password);
     }
+
+
 
 }

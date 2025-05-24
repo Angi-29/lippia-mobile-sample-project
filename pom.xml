@@ -31,11 +31,23 @@
                 <activeByDefault>true</activeByDefault>
             </activation>
             <properties>
-                <crowdar.driverHub>http://127.0.0.1:4723/wd/hub</crowdar.driverHub>
+                <crowdar.driverHub>http://127.0.0.1:4723/</crowdar.driverHub>
                 <cucumber.runner>testng.xml</cucumber.runner>
-                <crowdar.avd>Pixel3</crowdar.avd>
-                <crowdar.appLocation>C:\\\\Users\\\\golde\\\\Desktop\\\\lippia-mobile-sample-project\\\\sample_apk\\\\lippia.apk</crowdar.appLocation>
-                <crowdar.deviceName>Pixel3</crowdar.deviceName>
+                <crowdar.avd>Pixel7a</crowdar.avd>
+                <crowdar.appLocation>C:\\\\Users\\\\ADMIN\\\\OneDrive\\\\Desktop\\\\Lippia-mobile\\\\lippia-mobile-sample-project\\\\sample_apk\\\\lippia.apk</crowdar.appLocation>
+                <crowdar.deviceName>Pixel7a</crowdar.deviceName>
+            </properties>
+        </profile>
+        <profile>
+            <id>Local2</id>
+            <properties>
+                <crowdar.driverHub>http://127.0.0.1:4723/</crowdar.driverHub>
+                <cucumber.runner>testng.xml</cucumber.runner>
+                <crowdar.projectType.driverCapabilities.jsonFile>src/main/resources/capabilities/androidCapabilitiesInstall.json</crowdar.projectType.driverCapabilities.jsonFile>
+                <crowdar.avd>Pixel7a</crowdar.avd>
+                <crowdar.appOfd>com.mercadolibre</crowdar.appOfd>
+                <crowdar.appActivity>com.mercadolibre.splash.SplashActivity</crowdar.appActivity>
+                <crowdar.deviceName>Pixel7a</crowdar.deviceName>
             </properties>
         </profile>
         <profile>
@@ -113,11 +125,10 @@
     </build>
 
     <repositories>
-		<repository>
-			<id>crowdarRepo</id>
-			<name>crowdar-repository</name>
-			<url>https://nexus-v3-repositories.automation.crowdaronline.com/repository/maven-public/</url>
-		</repository>
-	</repositories>
+        <repository>
+            <id>central</id>
+            <url>https://repo.maven.apache.org/maven2</url>
+        </repository>
+    </repositories>
 
 </project>
