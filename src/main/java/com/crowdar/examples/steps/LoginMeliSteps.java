@@ -3,6 +3,7 @@ package com.crowdar.examples.steps;
 import com.crowdar.examples.services.LoginMeliService;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class LoginMeliSteps {
@@ -18,7 +19,13 @@ public class LoginMeliSteps {
     }
 
     @And("Ingresa el email {string} y la contraseña {string}")
-    public void ingresaElEmailYLaContraseña(String email, String pss) {
-        LoginMeliService.sendEmailLogin(email);
+    public void ingresaElEmailYLaContraseña(String email, String pas) {
+        LoginMeliService.sendEmailLogin(email, pas);
+
+    }
+
+    @Then("El usuario ve su cuenta activa en la app")
+    public void elUsuarioVeSuCuentaActivaEnLaApp() {
+        LoginMeliService.validarUbicacionHome();
     }
 }
