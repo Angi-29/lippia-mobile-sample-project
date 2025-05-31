@@ -28,4 +28,6 @@ public class LoginMeliSteps {
     public void elUsuarioVeSuCuentaActivaEnLaApp() {
         LoginMeliService.validarUbicacionHome();
     }
+
+
 }

@@ -36,7 +36,7 @@ public class LoginMeliService {
 
         MobileActionManager.waitVisibility(LoginMeliConstants.BTN_SIGUIENTE).click();
         //Parte manual para desactivar los captcha de meli
-        user.sleepcaptcha(10);
+        //user.sleepcaptcha(10);
         MobileActionManager.waitClickable(LoginMeliConstants.TXT_PASSW_LOGIN);
         MobileActionManager.setInput(LoginMeliConstants.TXT_PASS_LOGIN, auxPass);
 
